@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 300px;
+            height: 400px;
+            background: linear-gradient(#a2a3a2, #FFAA44);
+        }
+
+        form {
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        label {
+            display: flex;
+            width: 100%;
+            margin: 4px 0px;
+        }
+
+        span {
+            margin: 0px 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 4px 8px;
+            border-radius: 30px;
+        }
+
+        button {
+            background: #764d00;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            transition: all 0.4s;
+            border-radius: 30px;
+            font-weight: 700;
+            margin:4px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h1>Text to Speech</h1>
+        <input required placeholder="Text to Read" name="text" maxlength="200" />
+        <label><span>Volume</span><input name="volume" type="range" step="0.05" value="0.5" min="0" max="1" /></label>
+        <label><span>Pitch</span><input name="pitch" type="range" step="0.05" value="1" min="0" max="1" /></label>
+        <label><span>Rate</span><input name="rate" type="range" step="0.05" value="1" min="0" max="10" /></label>
+        <label><span>Enqueue</span><input name="enqueue" type="checkbox" /></label>
+        <select name="voiceName"></select>
+        <button type="submit">Speak</button>
+    </form>
+    <button id="resume">Resume</button>
+    <button id="pause">Pause</button>
+    <button id="stop">Stop</button>
+
+    <script type="text/javascript" src="/popup.js"></script>
+</body>
+
+</html>
